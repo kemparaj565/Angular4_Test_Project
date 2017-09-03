@@ -8,5 +8,36 @@
 <a routerLink="/product">Product</a><br/>
 
 <br/>
-
+<!-- Display section of the link clicked -->
 <router-outlet></router-outlet>
+
+<br/>
+<!--To Display the variable defined data binding-->
+{{obj.name}}
+
+<br/>
+<!-- Selector of subcomponents-->
+
+<app-members></app-members>
+
+<!-- Iterating over the elments -->
+<ul>
+<li *ngFor = "let i of arr">{{i}}  </li>
+</ul>
+
+<!-- Displaying and hiding text based on value by using If-->
+<p *ngIf = "isTrue">"Shiva is Great"</p>
+<p *ngIf="myName=='Shiva'">My Name is Shiva</p>
+
+<!-- Display using if else-->
+
+<p *ngIf="isTrue == true; else firstTemp">hello</p>
+
+<ng-template #firstTemp>This is Shiva.</ng-template>
+
+<!-- Printing everything in a template than defaul if-then-else-->
+
+<p *ngIf = "isTrue==true; then trueTemp else falseTemp"></p>
+
+<ng-template #trueTemp> I am true</ng-template>
+<ng-template #falseTemp> I am false</ng-template>

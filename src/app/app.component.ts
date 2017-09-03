@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Hello Shiva';
   name='Shambo';
+  obj={
+  id:"1",
+  name:"Shiva"
+  
+  };
+  arr=["Shiva","is","Great"];
+  isTrue="false";
+  myName="Shiva";
 }
