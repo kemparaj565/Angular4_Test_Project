@@ -16,4 +16,5 @@ export class AppComponent {
   arr=["Shiva","is","Great"];
   isTrue="false";
   myName="Shiva";
+  item=['Angular 4','React JS','Node JS'];
 }

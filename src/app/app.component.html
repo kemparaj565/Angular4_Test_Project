@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{title}}!
 </h1>
@@ -7,37 +7,91 @@
 <a routerLink="/member">Member</a><br/>
 <a routerLink="/product">Product</a><br/>
 
-<br/>
+<br/> -->
 <!-- Display section of the link clicked -->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet>
 
-<br/>
+<br/> -->
 <!--To Display the variable defined data binding-->
-{{obj.name}}
+<!-- {{obj.name}}
 
-<br/>
+<br/> -->
 <!-- Selector of subcomponents-->
 
-<app-members></app-members>
+<!-- <app-members></app-members> -->
 
 <!-- Iterating over the elments -->
-<ul>
+<!-- <ul>
 <li *ngFor = "let i of arr">{{i}}  </li>
-</ul>
+</ul> -->
 
-<!-- Displaying and hiding text based on value by using If-->
+<!-- Displaying and hiding text based on value by using If
 <p *ngIf = "isTrue">"Shiva is Great"</p>
 <p *ngIf="myName=='Shiva'">My Name is Shiva</p>
 
 <!-- Display using if else-->
 
-<p *ngIf="isTrue == true; else firstTemp">hello</p>
+<!-- <p *ngIf="isTrue == true; else firstTemp">hello</p>
 
 <ng-template #firstTemp>This is Shiva.</ng-template>
-
-<!-- Printing everything in a template than defaul if-then-else-->
+ -->
+<!-- Printing everything in a template than defaul if-then-else
 
 <p *ngIf = "isTrue==true; then trueTemp else falseTemp"></p>
 
 <ng-template #trueTemp> I am true</ng-template>
 <ng-template #falseTemp> I am false</ng-template>
+
+-->
+
+
+
+
+<div class="main">
+<h1> Item's List</h1>
+	<div class="addItem">
+	<input placeholder="Add Your Item here" class="addText"/>
+	<button>Add Item</button>
+	</div>
+		<ul *ngFor ="let i of item">
+			<li>
+				{{i}}
+				<span> X</span>
+			</li>
+		</ul>		
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
