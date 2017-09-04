@@ -50,13 +50,13 @@
 <div class="main">
 <h1> Item's List</h1>
 	<div class="addItem">
-	<input placeholder="Add Your Item here" class="addText"/>
-	<button>Add Item</button>
+	<input [(ngModel)]="newItem" placeholder="Add Your Item here" class="addText"/>
+	<button (click) = "pushItem()">Add Item</button>
 	</div>
-		<ul *ngFor ="let i of item">
+		<ul *ngFor ="let i of item ; let ind = index">
 			<li>
 				{{i}}
-				<span> X</span>
+				<span (click) = "popItem(ind)"> X</span>
 			</li>
 		</ul>		
 </div>

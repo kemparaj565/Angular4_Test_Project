@@ -7,14 +7,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Hello Shiva';
+  
   name='Shambo';
+  
   obj={
   id:"1",
   name:"Shiva"
   
   };
+  
   arr=["Shiva","is","Great"];
+  
   isTrue="false";
+  
   myName="Shiva";
+  
   item=['Angular 4','React JS','Node JS'];
+  
+  newItem="";
+  
+  pushItem=function(){
+  if(this.newItem !=""){
+  this.item.push(this.newItem);
+  this.newItem="";
+  }
+
+  }
+
+  popItem=function(index){
+    this.item.splice(index,1); //Remove element at index & remove 1 element only
+  }
 }
