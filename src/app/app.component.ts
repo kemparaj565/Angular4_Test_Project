@@ -42,4 +42,8 @@ export class AppComponent {
 
   arrs=[3,1,5,9,4,8];
 
+  onSubmit=function(user){
+  console.log(user);
+  }
+
 }
