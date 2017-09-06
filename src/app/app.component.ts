@@ -37,4 +37,9 @@ export class AppComponent {
   popItem=function(index){
     this.item.splice(index,1); //Remove element at index & remove 1 element only
   }
+
+  day= new Date(2017,4,6);
+
+  arrs=[3,1,5,9,4,8];
+
 }

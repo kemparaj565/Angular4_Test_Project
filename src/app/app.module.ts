@@ -9,12 +9,16 @@ import { MyComponentComponent } from './my-component/my-component.component';
 import { ProductComponent } from './product/product.component';
 import { MembersComponent } from './members/members.component';
 
+import { SortPipe } from './app.sortpipe';
+
 @NgModule({
   declarations: [
+    SortPipe,
     AppComponent,
     MyComponentComponent,
     ProductComponent,
     MembersComponent
+
   ],
   imports: [
     BrowserModule,

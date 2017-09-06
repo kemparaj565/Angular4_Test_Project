@@ -65,9 +65,9 @@
 
 <br>
 
-<!--Using Pipes-->
+<!--Using Pipes & Built In Pipes-->
 
-<h5>{{myName}}</h5><span>Actual Text</span>
+<!-- <h5>{{myName}}</h5><span>Actual Text</span>
 <br>
 <h5>{{myName | uppercase}}</h5><span> After using filter to Upper Case</span>
 <br>
@@ -75,7 +75,30 @@
 
 
 
+<br>
 
+<h3>{{day}}</h3>
+
+<br>
+
+<h3>{{day | date}}</h3>
+<br>
+
+<h3>{{day | date : 'shortDate'}}</h3>
+<br>
+<h3>{{day | date : 'fullDate'}}</h3>
+<br>
+<h3>{{day | date : 'fullDate' | uppercase}}</h3>
+ -->
+
+
+ <!-- Custom Pipe -->
+
+<h3>Sort using custom Pipe -> ascending</h3>
+ {{arrs | sort:'ascending'}}
+<br>
+<h3>Sort using custom Pipe -> descending</h3>
+{{ arrs | sort: 'descending'}}
 
 
 
