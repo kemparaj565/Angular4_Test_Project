@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormGroup,FormControl } from '@angular/forms'
 
 @Component({
   selector: 'app-root',
@@ -42,6 +43,21 @@ export class AppComponent {
 
   arrs=[3,1,5,9,4,8];
 
+  
+
+  form;
+
+  ngOnInit(){
+
+this.form= new FormGroup({
+      firstname:new FormControl("Shiva"), // Loading default values for constructor
+      lastname:new FormControl(),
+      languages:new FormControl(),
+
+
+  })
+
+  }
   onSubmit=function(user){
   console.log(user);
   }

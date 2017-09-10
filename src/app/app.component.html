@@ -101,9 +101,10 @@
 {{ arrs | sort: 'descending'}} -->
 
 <h3>Template Driven Forms</h3>
+<!--Forms Module-->
 <br>
 
-<form class="container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+<!-- <form class="container" #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
 <input type="text" name="firstname" ngModel/><br>
 <input type="text" name="lastname" ngModel><br>
 <select name="languages" ngModel>
@@ -114,9 +115,25 @@
 <br><br>
 <input type="submit" value="submit">
 </form>
+<br><br> -->
 
+<h4>Model Driven Forms</h4>
+<!--2 way data binding ; changes to var detected
+Reactive Forms Module; FormGroup,FormControl Components
+-->
+<br>
 
-
+<form class="container" [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+<input type="text" name="firstname" formControlName="firstname"/><br>
+<input type="text" name="lastname" formControlName="lastname"><br>
+<select name="languages" formControlName="languages">
+	<option value="c++">C++</option>
+	<option value="java">Java</option>
+	<option value="angular">Angular</option>
+</select>
+<br><br>
+<input type="submit" value="submit">
+</form>
 
 
 
