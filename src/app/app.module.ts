@@ -11,6 +11,7 @@ import { ProductComponent } from './product/product.component';
 import { MembersComponent } from './members/members.component';
 
 import { SortPipe } from './app.sortpipe';
+import { BaseconverterComponent } from './baseconverter/baseconverter.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SortPipe } from './app.sortpipe';
     AppComponent,
     MyComponentComponent,
     ProductComponent,
-    MembersComponent
+    MembersComponent,
+    BaseconverterComponent
 
   ],
   imports: [
