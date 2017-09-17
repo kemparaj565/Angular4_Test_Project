@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormGroup,FormControl } from '@angular/forms'
+import { FormGroup,FormControl } from '@angular/forms';
+import { MyfirstserviceService } from './myfirstservice.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,11 @@ import { FormGroup,FormControl } from '@angular/forms'
 export class AppComponent {
   title = 'Hello Shiva';
   
+  constructor(private firstService:MyfirstserviceService){
+
+  }
+
+
   name='Shambo';
   
   obj={
@@ -48,6 +54,10 @@ export class AppComponent {
   form;
 
   ngOnInit(){
+
+  console.log(this.firstService.success());
+  
+  console.log(this.firstService.obj);
 
 this.form= new FormGroup({
       firstname:new FormControl("Shiva"), // Loading default values for constructor

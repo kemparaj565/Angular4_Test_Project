@@ -26,14 +26,14 @@ export class BaseconverterComponent implements OnInit {
   o=0;
 
   decimalChanged=function(oldValue,newValue){
-  console.log(newValue);
+  //console.log(newValue);
   if(newValue!=""){
   this.form.patchValue({binary:parseInt(newValue,10).toString(2)});
   this.form.patchValue({octal:parseInt(newValue,10).toString(8)});
   this.form.patchValue({hexa:parseInt(newValue,10).toString(16).toUpperCase()});
   }
   else{
-   this.form.patchValue({binary:""});
+   this.form.patchValue({binary:oldValue});
   this.form.patchValue({octal:""});
   this.form.patchValue({hexa:""});
   }
@@ -41,7 +41,7 @@ export class BaseconverterComponent implements OnInit {
 
 binaryChanged=function(oldValue,newValue){
 	this.b=this.b +1;
-	if(this.b!=1){
+	if(this.b==1){
 	if(newValue!= ""){
 	this.form.patchValue({decimal:parseInt(newValue,2).toString(10)});
 	}

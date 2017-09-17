@@ -6,12 +6,14 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { MyfirstserviceService } from './myfirstservice.service';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { ProductComponent } from './product/product.component';
 import { MembersComponent } from './members/members.component';
 
 import { SortPipe } from './app.sortpipe';
 import { BaseconverterComponent } from './baseconverter/baseconverter.component';
+import { FormvalidationsComponent } from './formvalidations/formvalidations.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { BaseconverterComponent } from './baseconverter/baseconverter.component'
     MyComponentComponent,
     ProductComponent,
     MembersComponent,
-    BaseconverterComponent
+    BaseconverterComponent,
+    FormvalidationsComponent
 
   ],
   imports: [
@@ -39,7 +42,7 @@ import { BaseconverterComponent } from './baseconverter/baseconverter.component'
     }
     ])
   ],
-  providers: [],
+  providers: [MyfirstserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
