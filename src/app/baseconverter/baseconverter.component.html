@@ -1,7 +1,7 @@
 <form  [formGroup]="form" align="center">
 <h1>Base Converter App</h1>
 <input type="text" name="decimal" formControlName="decimal" placeholder="Decimal" (ngModelChange)="decimalChanged(oldValue,newValue=$event)"/><br>
-<input type="text" name="binary" formControlName="binary" placeholder="Binary"/><br>
-<input type="text" name="hexa" formControlName="hexa" placeholder="Hexa"/><br>
-<input type="text" name="octal" formControlName="octal" placeholder="Octal"/><br>
+<input type="text" name="binary" formControlName="binary" placeholder="Binary" (ngModelChange)="binaryChanged(oldValue,newValue=$event)"/><br>
+<input type="text" name="hexa" formControlName="hexa" placeholder="Hexa" (ngModelChange)="hexaChanged(oldValue,newValue=$event)"/><br>
+<input type="text" name="octal" formControlName="octal" placeholder="Octal" (ngModelChange)="octalChanged(oldValue,newValue=$event)"/><br>
 </form>
