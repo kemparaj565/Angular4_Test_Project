@@ -1,13 +1,38 @@
 import { Component } from '@angular/core';
 import { FormGroup,FormControl } from '@angular/forms';
 import { MyfirstserviceService } from './myfirstservice.service';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  styles:[`
+          div{
+          margin: 0 auto;
+          text-align:center;
+          width: 100px;
+          }
+  `],
+  animations:[
+    trigger('myAnim',[
+    state('smaller',style({
+    transform:'scale (1)'
+    })),
+    state('large',style({
+    transform:'scale(3 )'
+    })),
+    transition('smaller<=> large',animate('300ms ease-in'))
+    ])
+  ]
 })
 export class AppComponent {
+
+  state: string='smaller'
+  animate(){
+  this.state=this.state=='large'?'smaller':'large';
+  }
+
   title = 'Hello Shiva';
   
   constructor(private firstService:MyfirstserviceService){
@@ -58,6 +83,8 @@ export class AppComponent {
   console.log(this.firstService.success());
   
   console.log(this.firstService.obj);
+
+  this.firstService.fetchData();
 
 this.form= new FormGroup({
       firstname:new FormControl("Shiva"), // Loading default values for constructor
